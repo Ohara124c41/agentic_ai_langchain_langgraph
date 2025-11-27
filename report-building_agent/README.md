@@ -15,7 +15,7 @@ From `report-building_agent/starter`:
 5) Run: `python main.py`.
 
 ### Architecture and Routing
-![System Architecture](./docs/sysarch.png)
+![System Architecture](./architecture_diagram/sysarch.png)
 
 - **Router**: `classify_intent` calls the LLM with conversation history + user input, enforcing `UserIntent` structured output.
 - **Intent map**:
