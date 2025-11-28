@@ -1,0 +1,10 @@
+flowchart TD
+  U[User/Ticket] --> S[Supervisor]
+  S --> C[Classifier/Router]
+  C -- billing/refund/account --> T[Tooling Agent]
+  C -- other --> K[Knowledge Resolver]
+  K -- low confidence --> E[Escalation]
+  T -- failure/low confidence --> E
+  K -- draft answer --> F[Finalize]
+  T -- tool result --> F
+  E --> F
